@@ -47,7 +47,9 @@ def save_out_put(filename, output_file , contents):
         file.close()
 
 def main():
-    filename = "input.txt"
+    filename = input("May you kindly enter the file name to create)
+    if "txt" not in filename:
+        raise ValueError("Please enter a correct file name ! ")
     output_file = "output.txt"
     procesee = process_text(filename)
     contents = read_contents(filename)[0]
